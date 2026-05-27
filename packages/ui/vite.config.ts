@@ -11,7 +11,13 @@ export default defineConfig({
       fileName: 'index'
     },
     rollupOptions: {
-      external: ['react', 'react-dom']
+      external: [
+        'react', 
+        'react-dom', 
+        '@popperjs/core', 
+        'react-transition-group', 
+        'zustand'
+      ]
     }
   }
 });

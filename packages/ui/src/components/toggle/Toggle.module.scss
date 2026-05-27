@@ -1,0 +1,47 @@
+
+
+.container{
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  padding: 4px;
+
+  background-color: var(--light-accent-color);
+  box-shadow: var(--first-shadow);
+  border-radius: 57px;
+
+  height: 24px;
+  width: 44px;
+
+  transition: background-color 500ms ease;
+
+  &:has(.checkbox:checked) {
+    background-color: var(--dividing-line);
+  }
+}
+
+.ellipse{
+  position: absolute;
+  top: 4px;
+  left: 4px;
+
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+
+  transition: left 300ms, background-color 300ms ease;
+}
+
+.checkbox:checked + .ellipse{
+  left: calc(100% - 20px);
+  background-color: var(--white-color);
+}
+
+.checkbox:checked + .container{
+  background-color: var(--dividing-line);
+}

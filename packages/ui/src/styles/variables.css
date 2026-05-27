@@ -1,0 +1,111 @@
+/* Для теми "light" */
+:root{
+  /* Curents colors */
+  --white-color: rgba(255, 255, 255, 1);
+  --second-white-color: rgba(253, 253, 253, 1);
+
+  --main-bg-color: rgba(217, 217, 217, 1);
+  --accent-color: rgba(135, 147, 156, 1);
+  --light-accent-color: rgba(241, 241, 241, 1);
+
+  --text-color: rgb(121, 121, 121);
+  --accent-text-color: rgba(0, 0, 0, 1);
+
+  /* ---- */
+  --error-color: red;
+  --blue-color: rgba(87, 140, 181, 1);
+  --dividing-line: rgba(106, 123, 136, 1);
+  --current-day-table: rgba(234, 244, 255, 1);
+  /* ---- */
+
+  /* Shadows */
+  --first-shadow: 1px 1px 5px 0px rgba(113,113,113,0.15), inset 1px 1px 8px 1px rgba(224,224,226,0.35);
+  --second-shadow: inset 1px 1px 4px 1px rgba(12,12,13,0.05);
+  --text-editor-shadow: inset 2px 2px 8px 2px rgba(12,12,13,0.05);
+  --custom-shadow: 5px 0px 15px 2px rgba(22,27,29,0.15);
+
+  /* business processes btns */
+  --process_btn-color: rgba(95, 189, 221, 1);
+  --correct-btn-color: rgba(88, 167, 88, 1);
+  --cancel-btn-color: rgba(235, 103, 98, 1);
+  
+  /* login page */
+  --login-bg-color: rgba(70, 96, 121, 1);
+  --red-text: rgba(246, 2, 1, 1);
+  
+  /* Projects */
+  --non-active-color: rgba(87, 87, 87, 1);
+  --active-status-color: rgba(255, 143, 30, 1);
+
+  /* Dynamic lists, tables bg colors */
+  --dynamic-main-bg-color-blue: rgba(69, 114, 195, 1);
+  --dynamic-second-bg-color-blue: rgba(215, 227, 239, 1);
+
+  --dynamic-main-bg-color-green: rgba(107, 172, 70, 1);
+  --dynamic-second-bg-color-green: rgba(226, 239, 219, 1);
+
+  /* Company structure */
+  --structure-first-bg-color: rgb(236, 30, 50);
+  --structure-second-bg-color: rgb(48, 61, 74);
+  --structure-third-bg-color: rgb(228, 228, 228);
+  --structure-third-text-color: rgb(134, 134, 134);
+
+  /* color for rgb */
+  --dividing-line-rgb: 106, 123, 136;
+  --accent-color-rgb: 135, 147, 156;
+  --correct-btn-color-rgb: 88, 167, 88;
+  --cancel-btn-color-rgb: 235, 103, 98;
+  --white-color-rgb: 255, 255, 255;
+  --second-white-color-rgb: 253, 253, 253;
+  --text-color-rgb: 121, 121, 121;
+  --active-status-color-rgb: 255, 143, 30;
+  --light-accent-color-rgb: 241, 241, 241;
+  --accent-text-color-rgb: 0, 0, 0;
+  --error-color-rgb: 255, 0, 0;
+  /*---*/
+}
+
+/* Для теми "dark" */
+[data-theme="dark"] {
+  /* test */
+  --white-color: rgba(40, 40, 40, 1);
+  --second-white-color: rgba(50, 50, 50, 1);
+
+  --main-bg-color: rgba(35, 35, 35, 1);
+  --accent-color: rgba(85, 95, 105, 1);
+  --light-accent-color: rgba(60, 60, 60, 1);
+
+  --text-color: rgb(220, 220, 220);
+  --accent-text-color: rgba(255, 255, 255, 1);
+
+  --error-color: rgba(255, 90, 90, 1);
+  --blue-color: rgba(120, 180, 225, 1);
+  --dividing-line: rgba(90, 90, 90, 1);
+  --current-day-table: rgba(55, 65, 80, 1);
+
+  --first-shadow: 1px 1px 5px 0px rgba(0,0,0,0.4), inset 1px 1px 8px 1px rgba(30,30,30,0.5);
+  --second-shadow: inset 1px 1px 4px 1px rgba(0,0,0,0.3);
+  --text-editor-shadow: inset 2px 2px 8px 2px rgba(0,0,0,0.3);
+  --custom-shadow: 5px 0px 15px 2px rgba(0,0,0,0.5);
+
+  --process_btn-color: rgba(75, 165, 195, 1);
+  --correct-btn-color: rgba(80, 150, 80, 1);
+  --cancel-btn-color: rgba(210, 75, 70, 1);
+
+  /* color for rgb */
+  --white-color-rgb: 40, 40, 40;
+  --second-white-color-rgb: 50, 50, 50;
+
+  --accent-color-rgb: 85, 95, 105;
+  --light-accent-color-rgb: 60, 60, 60;
+
+  --text-color-rgb: 220, 220, 220;
+  --accent-text-color-rgb: 255, 255, 255;
+
+  --error-color-rgb: 255, 90, 90;
+  --dividing-line-rgb: 90, 90, 90;
+
+  --correct-btn-color-rgb: 80, 150, 80;
+  --cancel-btn-color-rgb: 210, 75, 70;
+  /*---*/
+}

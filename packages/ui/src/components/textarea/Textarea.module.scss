@@ -1,0 +1,29 @@
+
+
+.container{
+  padding: 9px 15px;
+
+  width: 100%;
+  height: 126px;
+
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+
+  color: var(--accent-text-color);
+
+  background-color: var(--light-accent-color);
+  box-shadow: var(--second-shadow);
+  border-radius: 12px;
+
+  overflow: hidden;
+  overflow-y: auto;
+
+  border: none;
+  outline: none;
+
+  &::placeholder{
+    color: rgba($color: var(--text-color-rgb), $alpha: 0.5);
+  } 
+}
+

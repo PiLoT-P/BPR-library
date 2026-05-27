@@ -1,0 +1,41 @@
+.pagination{
+  padding: 10px 20px;
+  width: max-content;
+  
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  background-color: var(--white-color);
+  border-radius: 10px;
+  box-shadow: var(--custom-shadow);
+
+  .btn{
+    width: 30px;
+    height: 30px;
+
+    min-width: unset;
+    min-height: unset;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    border-radius: 50%;
+  }
+
+  .dots{
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

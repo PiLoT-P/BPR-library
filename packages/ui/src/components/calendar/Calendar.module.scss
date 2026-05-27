@@ -1,0 +1,171 @@
+;
+
+.container {
+  width: 270px;
+
+  padding: 15px;
+  padding-bottom: 35px;
+
+  background-color: var(--second-white-color);
+  box-shadow: var(--first-shadow);
+  border-radius: 16px;
+
+  color: var(--text-color);
+}
+
+.title_block{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+
+  .month{
+    padding: 0px 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    border-radius: 5px;
+
+    button &:hover{
+      background-color: rgba($color: #000000, $alpha: 0.06);
+    }
+  }
+
+}
+
+
+.week_days_list{
+  padding: 10px 5px;
+  padding-bottom: 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .item:first-child{
+    border-top-left-radius: 10px;
+  }
+
+  .item:last-child{
+    border-top-right-radius: 10px;
+  }
+
+  .item{
+    width: calc((100% ) / 7);
+    height: 30px;
+
+    padding: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: var(--light-accent-color);
+    box-shadow: var(--second-shadow);
+  }
+}
+
+.dates_list{
+  padding: 0px 5px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .item:last-child{
+    border-bottom-right-radius: 10px;
+  }
+
+  .item:nth-last-child(7){
+    border-bottom-left-radius: 10px;
+  }
+
+  .item{
+    width: calc((100% ) / 7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2.5px 0px;
+
+    background-color: var(--light-accent-color);
+    box-shadow: var(--second-shadow);
+
+    .date_btn{
+      width: 25px;
+      height: 25px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      font-size: 13px;
+
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover{
+        background-color: var(--text-color);
+        color: var(--second-white-color);
+      }
+
+      &.active{
+        background-color: var(--text-color);
+        color: var(--second-white-color);
+      }
+      
+      &.past_date{
+        color: rgba($color: var(--text-color-rgb), $alpha: 0.6);
+
+        &:hover{
+          color: var(--second-white-color);
+        }
+
+        &.active{
+          background-color: var(--text-color);
+          color: var(--second-white-color);
+        }
+      }
+    }
+  }
+}
+
+
+.months_list{
+  padding-top: 10px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  .item{
+    display: flex;
+    justify-content: center;
+
+    width: calc((100% - 10px) / 3);
+
+    .month_change_btn{
+      width: 100%;
+
+      padding: 2px 5px;
+
+      font-size: 12px;
+
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-radius: 10px;
+      &:hover{
+        background-color: var(--text-color);
+        color: var(--second-white-color);
+      }
+    }
+  }
+}

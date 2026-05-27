@@ -1,0 +1,43 @@
+
+.container {
+  padding: 12px 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  .icon{
+    fill: currentColor;
+  }
+
+  background-color: var(--process_btn-color);
+  border-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+  color: var(--white-color);
+  
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  &.info{ background-color: var(--process_btn-color)}
+  &.error{ background-color: var(--cancel-btn-color)}
+  &.success{ background-color: var(--correct-btn-color)}
+  &.warning{ background-color: var(--active-status-color)}
+
+  .message_text{
+    white-space: pre-line;
+  }
+}
+
+.container.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.container.close {
+  transform: translateX(100%);
+  opacity: 0;
+}

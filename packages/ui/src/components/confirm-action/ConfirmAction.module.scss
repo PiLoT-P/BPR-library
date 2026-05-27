@@ -1,0 +1,40 @@
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 15px;
+  padding-right: 5px;
+
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+
+  background-color: var(--second-white-color);
+  border-radius: 10px;
+
+  .message{
+    text-align: center;
+
+    font-weight: 500;
+    font-size: 22px;
+
+    color: var(--accent-text-color);
+  }
+}
+
+.actions_block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  .confirm_btn{
+    background-color: var(--correct-btn-color);
+  }
+
+  .cancel_btn{
+    background-color: var(--cancel-btn-color);
+  }
+}

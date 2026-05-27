@@ -1,0 +1,53 @@
+
+
+.switch_btn{
+  position: relative;
+
+  width: 65px;
+  height: 26px;
+  
+  background-color: grey;
+  box-shadow: var(--second-shadow);
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+
+  transition: background-color 0.3s ease;
+
+  .circle{
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--white-color);
+    border-radius: 50%;
+    
+    transition: transform 0.3s ease;
+
+    .icon{
+      color: var(--accent-text-color);
+    }
+  }
+
+  &.correct{
+    background-color: var(--correct-btn-color);
+
+    .circle{
+      transform: translateX(39px);
+    }
+  }
+
+  &.cancel{
+    background-color: var(--cancel-btn-color);
+    .circle{
+      transform: translateX(0);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+;
+
+.container{
+  padding: 4px 12px;
+  padding-right: 4px;
+
+  width: min-content;
+  min-width: 225px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  background-color: var(--light-accent-color);
+  box-shadow: var(--second-shadow);
+  border-radius: 16px;
+
+  .date_text{
+    color: var(--accent-text-color);
+
+    font-weight: 400;
+    font-size: 14px;
+  }
+} 

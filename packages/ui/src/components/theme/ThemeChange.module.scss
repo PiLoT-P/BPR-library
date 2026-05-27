@@ -1,0 +1,28 @@
+
+.theme_btn{
+  width: 80px;
+  padding: 5px 10px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  box-shadow: var(--second-shadow);
+  background-color: var(--main-bg-color);
+  border-radius: 16px; 
+}
+
+.icon{
+  position: relative;
+  left: 0px;
+
+  fill: var(--accent-text-color);
+
+  transition: transform 500ms, left 500ms;
+  
+  &.dark{
+    transform: rotate(360deg);
+    left: calc(100% - 20px);
+  }
+}

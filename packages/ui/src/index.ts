@@ -1,2 +1,4 @@
+import './styles/variables.css';
+import './styles/base/reset.css';
 export * from './components';
-import './styles/index.scss';
+
