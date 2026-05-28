@@ -1,5 +1,4 @@
 import { FC, SVGProps } from "react";
-import icons from '../../assets/icons/symbol-defs.svg';
 import s from './Icon.module.scss';
 
 export interface IconProps extends SVGProps<SVGSVGElement> {
@@ -22,8 +21,8 @@ export const  Icon: FC<IconProps> = ({
       role={isDecorative ? undefined : 'img'}
     >
       <use
-        href={`${icons}#icon-${name}`}
-        xlinkHref={`${icons}#icon-${name}`}
+        href={`#icon-${name}`}
+        xlinkHref={`#icon-${name}`}
       />
     </svg>
   );

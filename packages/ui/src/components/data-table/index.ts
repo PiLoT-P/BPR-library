@@ -1,2 +1,2 @@
 export { DataTable } from './DataTable';
-export type { DataTableProps, Column } from './DataTable';
+export type { DataTableProps, Column, IColumnSort } from './DataTable';
