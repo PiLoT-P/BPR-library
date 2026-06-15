@@ -1,19 +1,28 @@
-import { Button, Icon, Autocomplete, ModalBox } from 'bpr-library';
-import { useState } from 'react';
+import { Button, Icon, Autocomplete, ModalBox, PopUp } from 'bpr-library';
+import { useRef, useState } from 'react';
 
 export default function App() {
   const [isOpen, setIsOpen] = useState<boolean>(false); 
+  const [isOpenSecond, setIsOpenSecond] = useState<boolean>(false); 
+
+  const testRef = useRef<HTMLDivElement>(null);
+  const test2Ref = useRef<HTMLDivElement>(null);
 
   return (
-    <div style={{ padding: 40 }}>
+    <div style={{ padding: 40 }}
+    >
       <h1>Playground for BPR Library</h1>
-      <Button 
-        variant="primary" 
-        style={{ marginBottom: 10 }}
-        onClick={() => {setIsOpen(true)}}
+      <div
+        ref={testRef}
       >
-        Primary Button
-      </Button>
+        <Button 
+          variant="primary" 
+          style={{ marginBottom: 10 }}
+          onClick={() => {setIsOpen(true)}}
+        >
+          Primary Button
+        </Button>
+      </div>
       <Button variant="secondary">
         Secondary Button
       </Button>
@@ -26,13 +35,30 @@ export default function App() {
         handleSearch={() => {}}
         options={[]}
       />
-      <ModalBox
-        isOpen={isOpen}
-        handleClose={() => {setIsOpen(false)}}
-        type='center'
-      >
-        <div>test modal</div>
-      </ModalBox>
+
+      {isOpen &&
+        <PopUp
+          containerRef={testRef}
+          handleClose={() => {setIsOpen(false)}}
+        >
+          <div
+            ref={test2Ref}
+          >
+            <Button onClick={() => setIsOpenSecond(true)}>Children popup</Button>
+
+            {isOpenSecond &&
+              <PopUp
+                containerRef={test2Ref}
+                handleClose={() => {setIsOpenSecond(false)}}
+              >
+                <div>
+                  <h5>TEST CHILD POPUP</h5>
+                </div>
+              </PopUp>
+            }
+          </div>
+        </PopUp>
+      }
     </div>
   );
 }

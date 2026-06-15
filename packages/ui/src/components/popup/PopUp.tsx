@@ -1,7 +1,8 @@
 import { createPopper, VirtualElement } from "@popperjs/core";
-import { CSSProperties, ReactNode, RefObject, useEffect, useRef, useState } from "react";
+import { CSSProperties, ReactNode, RefObject, useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import s from './PopUp.module.scss';
+import { usePopupStore } from "../../store/popup/popup.store";
 
 export interface PopUpProps {
   containerRef?: RefObject<HTMLDivElement | HTMLButtonElement | null>,
@@ -25,6 +26,17 @@ export function PopUp ({
   const [minWidth, setMinWidth] = useState<number>(containerRef?.current ?
     containerRef.current.getBoundingClientRect().width : 0);
   const popoverRef = useRef<HTMLDivElement | null>(null);
+
+  const popupId = useId();
+
+  const openPopup = usePopupStore((state) => state.openPopup);
+  const closePopupStore = usePopupStore((state) => state.closePopup);
+  const isTopPopup = usePopupStore((state) => state.isTopPopup);
+
+  useEffect(() => {
+    openPopup(popupId);
+    return () => {closePopupStore(popupId) };
+  }, []);
 
   useEffect(() => {
     let popperInstance: ReturnType<typeof createPopper> | null = null;
@@ -76,17 +88,12 @@ export function PopUp ({
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (popoverRef.current && !popoverRef.current.contains(event.target as Node)) {
-        // Якщо containerRef є, перевіряємо і його
-        if (containerRef?.current) {
-          if (!containerRef.current.contains(event.target as Node)) {
-            handleClose();
-          }
-        } else {
-          // Якщо containerRef немає — закриваємо одразу
-          handleClose();
-        }
-      }
+      if (!isTopPopup(popupId)) {return}
+
+      if (
+        popoverRef.current &&
+        !popoverRef.current.contains(event.target as Node)
+      ) {handleClose() }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
