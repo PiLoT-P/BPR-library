@@ -166,6 +166,11 @@
         background-color: var(--text-color);
         color: var(--second-white-color);
       }
+
+      &.active{
+        background-color: var(--text-color);
+        color: var(--second-white-color);
+      }
     }
   }
 }

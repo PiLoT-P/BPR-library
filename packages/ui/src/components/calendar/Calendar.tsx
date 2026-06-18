@@ -25,6 +25,7 @@ export function Calendar({
 }: CalendarProps) {
   const [currentDate, setCurrentDate] = useState<Date>(new Date(value));
   const [select, setSelect] = useState<boolean>(type === 'date' ? false : true);
+  const isSelectedYear = currentDate.getFullYear() === value.getFullYear();
 
   const handleGenerateDates = useCallback((date: Date) => {
     const days: {date: Date, isCurrentMonth: boolean, isPastDate: boolean}[] = [];
@@ -170,7 +171,10 @@ export function Calendar({
               >
                 <button
                   type="button"
-                  className={s.month_change_btn}
+                  className={`
+                    ${s.month_change_btn}
+                    ${(isSelectedYear && value.getMonth() === index) && s.active}
+                  `}
                   onClick={() => {
                     if(type === 'date'){
                       handleChangeCurrentMonth(index)

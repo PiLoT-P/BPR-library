@@ -1,9 +1,11 @@
-import { Button, Icon, Autocomplete, ModalBox, PopUp } from 'bpr-library';
+import { Button, Icon, Autocomplete, ModalBox, PopUp, DatePicker } from 'bpr-library';
 import { useRef, useState } from 'react';
 
 export default function App() {
   const [isOpen, setIsOpen] = useState<boolean>(false); 
   const [isOpenSecond, setIsOpenSecond] = useState<boolean>(false); 
+
+  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
 
   const testRef = useRef<HTMLDivElement>(null);
   const test2Ref = useRef<HTMLDivElement>(null);
@@ -59,6 +61,12 @@ export default function App() {
           </div>
         </PopUp>
       }
+
+      <DatePicker
+        value={selectedDate}
+        onChange={(date) => setSelectedDate(date)}
+        type='month'
+      />
     </div>
   );
 }
