@@ -368,7 +368,7 @@ baseline-browser-mapping@^2.9.0:
   integrity sha512-Mij6Lij93pTAIsSYy5cyBQ975Qh9uLEc5rwGTpomiZeXZL9yIS6uORJakb3ScHgfs0serMMfIbXzokPMuEiRyw==
 
 bpr-library@*, "bpr-library@file:C:\\Projects\\BPR-library\\packages\\ui":
-  version "0.0.19"
+  version "0.0.20"
   resolved "file:packages/ui"
   dependencies:
     "@popperjs/core" "^2.11.8"
